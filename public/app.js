@@ -50,10 +50,11 @@
     const desc = escapeHtml(r.description);
     const ts = escapeHtml(fmtTimestamp(r.timestamp));
     const isoAttr = escapeHtml(r.timestamp || '');
+    const href = `/requests/${encodeURIComponent(r.externalId)}`;
     return [
       '<tr>',
       '<td class="col-checkbox"><span class="cb" aria-hidden="true"></span></td>',
-      `<td class="col-external cell-external"><a href="#" tabindex="-1" onclick="return false">${ext}</a></td>`,
+      `<td class="col-external cell-external"><a href="${href}">${ext}</a></td>`,
       `<td class="col-description cell-description">${desc}</td>`,
       `<td class="col-timestamp cell-timestamp" title="${isoAttr}">${ts}</td>`,
       '<td class="col-actions">',

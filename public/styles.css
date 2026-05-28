@@ -670,3 +670,300 @@ a:hover {
     padding: 12px;
   }
 }
+
+/* ---------- Record page (detail view) ---------- */
+.record-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+.record-breadcrumb a {
+  color: var(--text-tertiary);
+}
+.record-breadcrumb a:hover {
+  color: var(--brand-blue-dark);
+}
+.record-breadcrumb-sep {
+  color: var(--border-strong);
+}
+.record-breadcrumb-current {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.record-page {
+  padding: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.record-highlights {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.record-highlights-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.record-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: var(--badge-orange);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+.record-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.record-id-block {
+  flex: 1;
+  min-width: 0;
+}
+.record-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-tertiary);
+  line-height: 1.2;
+}
+.record-title {
+  margin: 2px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: "SF Mono", "Menlo", Monaco, "Cascadia Mono", "Roboto Mono",
+    Consolas, monospace;
+  letter-spacing: 0.2px;
+}
+
+.record-key-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px 24px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.record-key-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.record-key-label {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.record-key-value {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.record-highlights-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.btn-icon {
+  width: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+.btn-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.record-tabs {
+  display: flex;
+  gap: 0;
+  margin-top: 12px;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+.record-tab {
+  height: 36px;
+  padding: 0 14px;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.record-tab:hover:not([aria-disabled="true"]) {
+  background: #fafaf9;
+  color: var(--brand-blue-dark);
+}
+.record-tab.active {
+  color: var(--brand-blue-dark);
+  border-bottom-color: var(--brand-blue);
+}
+.record-tab[aria-disabled="true"] {
+  color: var(--text-tertiary);
+  cursor: default;
+}
+
+.record-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+.record-card-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: #fafaf9;
+}
+.record-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.record-card-body {
+  padding: 20px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+}
+.details-field {
+  min-width: 0;
+}
+.details-field-wide {
+  grid-column: 1 / -1;
+}
+.details-label {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.details-value {
+  font-size: 13px;
+  color: var(--text);
+  padding: 6px 8px;
+  border-radius: 4px;
+  min-height: 28px;
+  line-height: 1.5;
+  background: transparent;
+}
+.details-value:hover {
+  background: #fafaf9;
+}
+.details-value-mono {
+  font-family: "SF Mono", "Menlo", Monaco, "Cascadia Mono", "Roboto Mono",
+    Consolas, monospace;
+  color: var(--brand-blue-dark);
+  font-weight: 600;
+}
+.details-value-paragraph {
+  white-space: pre-wrap;
+}
+
+/* Status pills (Closing Reason) */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.status-pill-default {
+  background: #f3f2f2;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.status-pill-solved {
+  background: #e6f4ea;
+  color: #1b6e2b;
+  border: 1px solid #c4e3cb;
+}
+.status-pill-hold {
+  background: #fef0c7;
+  color: #855a00;
+  border: 1px solid #f5d77a;
+}
+.status-pill-pause {
+  background: #eaf5fe;
+  color: var(--brand-blue-dark);
+  border: 1px solid #c7e0f4;
+}
+.status-pill-transferred {
+  background: #f1e8fb;
+  color: #6f29bd;
+  border: 1px solid #e2cffb;
+}
+
+@media (max-width: 880px) {
+  .record-highlights {
+    flex-direction: column;
+  }
+  .record-highlights-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .record-page {
+    padding: 8px;
+  }
+  .record-highlights {
+    padding: 12px;
+  }
+  .record-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .record-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .record-title {
+    font-size: 18px;
+  }
+}

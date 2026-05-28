@@ -18,10 +18,20 @@ app.get('/api/requests', (req, res) => {
   });
 });
 
+app.get('/api/requests/:externalId', (req, res) => {
+  const record = requests.find((r) => r.externalId === req.params.externalId);
+  if (!record) return res.status(404).json({ error: 'Not found' });
+  res.json({ request: record });
+});
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
+app.get('/requests/:externalId', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'detail.html'));
 });
 
 app.listen(PORT, () => {
