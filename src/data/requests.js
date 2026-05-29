@@ -1,19 +1,22 @@
 // Hardcoded mock data for the CRM Requests list view and record pages.
 //
+// Theme: retail/SME banking BPO contact center. Descriptions are written
+// to match each record's `skill` (Card Information / Direct Debit /
+// Transfer).
+//
 // Enum fields:
 //   callChannel    : 'Call' | 'Email'
 //   skill          : 'Card Information' | 'Direct Debit' | 'Transfer'
 //   contactDriver  : 'New' | 'Existing'
 //   closingReason  : 'Solved' | 'On Hold' | 'On Pause' | 'Transferred'
 //
-// Edit this file to change what shows up; the list is sorted newest-first
-// by `timestamp` (rendered relatively for items under a week old, and as
-// an absolute date for older items).
+// The list is sorted newest-first by `timestamp` (rendered relatively for
+// items under a week old, and as an absolute date for older items).
 module.exports = [
   {
     externalId: 'REQ-1042',
     description:
-      'New hire equipment request: laptop and dual monitor setup for incoming marketing analyst starting Monday',
+      'New retail customer requesting setup for first international wire transfer to family in Manila; KYC documents pending verification',
     timestamp: '2026-05-27T16:25:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -23,7 +26,7 @@ module.exports = [
   {
     externalId: 'REQ-1041',
     description:
-      'Customer requested refund for duplicate subscription charge on invoice INV-88421',
+      'Customer reported duplicate direct debit collection of GBP 89.99 on 26-May for utility provider EnergyOne; refund processed under DD Guarantee',
     timestamp: '2026-05-27T16:09:00Z',
     callChannel: 'Email',
     skill: 'Direct Debit',
@@ -33,7 +36,7 @@ module.exports = [
   {
     externalId: 'REQ-1040',
     description:
-      'Account access escalation: locked out of admin portal after password rotation',
+      'Cardholder reporting lost debit card ending 4421 during recent travel; awaiting confirmation of last authorized transaction before blocking and reissuing',
     timestamp: '2026-05-27T15:40:00Z',
     callChannel: 'Call',
     skill: 'Card Information',
@@ -43,7 +46,7 @@ module.exports = [
   {
     externalId: 'REQ-1039',
     description:
-      'Procurement quote needed for 50 standing desks for the Austin office expansion',
+      'New corporate client requesting SWIFT transfer limit of USD 250,000 per day for cross-border supplier payments; onboarding compliance review in progress',
     timestamp: '2026-05-27T14:30:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -53,7 +56,7 @@ module.exports = [
   {
     externalId: 'REQ-1038',
     description:
-      'VPN connectivity dropping intermittently for remote sales team in EMEA region',
+      'Customer transfer of GBP 12,400 to beneficiary at HSBC UK not received after 3 business days; SWIFT trace MT103 initiated with correspondent bank',
     timestamp: '2026-05-27T11:15:00Z',
     callChannel: 'Call',
     skill: 'Transfer',
@@ -63,7 +66,7 @@ module.exports = [
   {
     externalId: 'REQ-1037',
     description:
-      'Reseller onboarding paperwork submission for new Latin America distribution partner',
+      'New business banking customer requesting bulk salary payment file (BACS) for first payroll run of 47 employees; escalated to Business Onboarding team',
     timestamp: '2026-05-27T07:42:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -73,7 +76,7 @@ module.exports = [
   {
     externalId: 'REQ-1036',
     description:
-      'Add new billing contact to renewal contract; update purchase order before EOQ',
+      'Customer requested cancellation of direct debit mandate to GymPlus Memberships effective immediately; mandate revoked and confirmation sent',
     timestamp: '2026-05-26T13:18:00Z',
     callChannel: 'Email',
     skill: 'Direct Debit',
@@ -83,7 +86,7 @@ module.exports = [
   {
     externalId: 'REQ-1035',
     description:
-      'Software license renewal: 25 additional seats requested for design team',
+      'Customer requested change of direct debit payment date from 1st to 28th of month to align with payday; mandate amended for next collection cycle',
     timestamp: '2026-05-25T20:05:00Z',
     callChannel: 'Email',
     skill: 'Direct Debit',
@@ -93,7 +96,7 @@ module.exports = [
   {
     externalId: 'REQ-1034',
     description:
-      'Customer training session requested for new compliance dashboard release',
+      'Customer disputing GBP 45 incoming wire fee on EUR 8,200 transfer from Spain; awaiting correspondent bank statement for fee breakdown review',
     timestamp: '2026-05-24T18:32:00Z',
     callChannel: 'Call',
     skill: 'Transfer',
@@ -103,7 +106,7 @@ module.exports = [
   {
     externalId: 'REQ-1033',
     description:
-      'Returns processing: damaged shipment received at Phoenix warehouse, request RMA',
+      'Cardholder requesting activation of replacement chip-and-PIN card delivered 22-May; activation completed and PIN reset link sent to mobile',
     timestamp: '2026-05-23T11:08:00Z',
     callChannel: 'Call',
     skill: 'Card Information',
@@ -113,7 +116,7 @@ module.exports = [
   {
     externalId: 'REQ-1032',
     description:
-      'Update tax exemption certificate on file; new W-9 attached',
+      'Customer reported failed direct debit to council tax (insufficient funds); customer added funds and re-presentment scheduled for next collection cycle',
     timestamp: '2026-05-22T15:55:00Z',
     callChannel: 'Email',
     skill: 'Direct Debit',
@@ -123,7 +126,7 @@ module.exports = [
   {
     externalId: 'REQ-1031',
     description:
-      'Conference room scheduling integration not syncing with Outlook calendars',
+      'Customer requesting recall of GBP 3,750 Faster Payment sent to incorrect sort code 20-32-19; case escalated to Fraud and Recovery team',
     timestamp: '2026-05-21T09:24:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -133,7 +136,7 @@ module.exports = [
   {
     externalId: 'REQ-1030',
     description:
-      'Quarterly business review: pull custom usage report for healthcare vertical accounts',
+      'Standing order amendment: customer increased monthly transfer to savings account from GBP 200 to GBP 350 effective 1-June',
     timestamp: '2026-05-19T17:12:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -143,7 +146,7 @@ module.exports = [
   {
     externalId: 'REQ-1029',
     description:
-      'Address change on account record after Singapore office relocation',
+      'Cardholder requested travel notification for upcoming trip to Japan (12-25 June) to prevent transactions being declined; notice added to card profile',
     timestamp: '2026-05-17T14:48:00Z',
     callChannel: 'Email',
     skill: 'Card Information',
@@ -153,7 +156,7 @@ module.exports = [
   {
     externalId: 'REQ-1028',
     description:
-      'Discount approval requested for 3-year prepay deal with Northwind Pharma',
+      'Customer requesting indemnity claim refund of GBP 1,247.30 for direct debit taken in error by insurance provider AllianceInsure; refund credited under DD Guarantee',
     timestamp: '2026-05-15T10:33:00Z',
     callChannel: 'Call',
     skill: 'Direct Debit',
@@ -163,7 +166,7 @@ module.exports = [
   {
     externalId: 'REQ-1027',
     description:
-      'Single sign-on configuration question: Okta vs Azure AD for new tenant',
+      'New customer onboarding query: confirmed IBAN format and SWIFT/BIC code required for incoming international transfer from Australian employer',
     timestamp: '2026-05-13T22:01:00Z',
     callChannel: 'Call',
     skill: 'Transfer',
@@ -173,7 +176,7 @@ module.exports = [
   {
     externalId: 'REQ-1026',
     description:
-      'Data migration support request: legacy CRM export from Pipedrive to new platform',
+      'New SME customer requesting setup of multi-currency wallet for EUR/USD/GBP transfers; routed to FX & Treasury team for tier-1 pricing review',
     timestamp: '2026-05-10T16:44:00Z',
     callChannel: 'Email',
     skill: 'Transfer',
@@ -183,7 +186,7 @@ module.exports = [
   {
     externalId: 'REQ-1025',
     description:
-      'Subscription downgrade processed; confirm proration credit on next invoice',
+      'Customer reactivated previously paused direct debit to mortgage provider Halifax effective 1-June; confirmation email sent',
     timestamp: '2026-05-06T08:19:00Z',
     callChannel: 'Email',
     skill: 'Direct Debit',
